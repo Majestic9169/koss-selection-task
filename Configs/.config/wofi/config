@@ -1,0 +1,13 @@
+style=/home/subzcuber/.config/wofi/style.css
+show=drun
+width=500
+height=500
+always_parse_args=true
+show_all=true
+allow_images=true
+print_command=true
+layer=overlay
+insensitive=true
+location=1
+prompt=hi
+image_size=20
