@@ -3,6 +3,8 @@
 - You can either
   - Download the Presentation folder and open the index.html file
   - or view here: [I use Arch btw](https://htmlpreview.github.io/?https://github.com/Majestic9169/legendary-chainsaw/blob/main/Presentation/index.html)
+    - Vertical slides seem to be giving me an issue when using this link, if pressing SPACE doesn't keep you moving forward in the presentation then please download the entire Presentation folder and view the index.html file
+    - I also request that view the presentation in full screen, I include a bunch of screenshots of my own desktop that get cropped if you aren't on a fullscreen display (preferably 16:9)
  
 ### What is in the config files?
 Here you will find the configuration files for 
