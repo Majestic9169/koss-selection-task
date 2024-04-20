@@ -34,3 +34,14 @@ Here you will find the configuration files for
   - wofi can be customised in some really cool ways but there isn't really any documentation for that, so I didn't do any of that.
   - Instead all I did was change the location to the top-left and make it display icons.
   - Other than that I copied the style.css from auspacious dots to make it look decent. It must be said, wofi and waybar both come with some really bad looking defaults. 
+
+### Some Updates
+Since the submission of this repo (2nd April 2024) I have added some more cool stuff to my Arch setup
++ I added a SUPER cool grub theme today, without using grub-customised (because it didn't work, if it did I would have done this before the submission)
++ I changed my Neofetch image to an image of Aqua crying (from Konosuba)
++ I downloaded pywal, changed my waybar config and style.css, and configured it to use the generated theme from pywal on every reload of my wallpaper. I am still playing with this.
++ I downloaded and set up the Graphite GTK theme using lxappearance, infact this is what led me to changing my grub theme as well
++ I installed hyprlock and actually setup a lockscreen, I kept it quite close to the image I showed in the presentation, even downloading a custom font and learning more about fonts via the process.
++ I tried setting up cava, but didn't work :(
++ I got better at using vim and ranger, and setup image previews on ranger on the kitty terminal. Kitty can quite easily display images and gifs, however I needed to download a python-pillow package to get it to work with ranger, which I don't get
+                                    
