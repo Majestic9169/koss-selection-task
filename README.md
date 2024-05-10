@@ -44,4 +44,7 @@ Since the submission of this repo (2nd April 2024) I have added some more cool s
 + I installed hyprlock and actually setup a lockscreen, I kept it quite close to the image I showed in the presentation, even downloading a custom font and learning more about fonts via the process.
 + I tried setting up cava, but didn't work :(
 + I got better at using vim and ranger, and setup image previews on ranger on the kitty terminal. Kitty can quite easily display images and gifs, however I needed to download a python-pillow package to get it to work with ranger, which I don't get
-                                    
+                
+### Update
+
+I lost all my configs recently, all these dotfiles are now outdated as I have since recreated my setup                    
