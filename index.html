@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>btw</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- intro slides, full of memes -->
+			<section>
+				<section data-background="black">
+					<img src="assets/archbackground.jpg" alt="">
+				</section>
+				<section data-background="#ffffff">
+					<img src="assets/archmeme1.jpg" alt="">
+				</section>
+				<section data-background="#1e578f">
+					<img src="assets/archmeme2.png" alt="">
+				</section>
+				<section data-background="#461205">
+					<img src="assets/archmeme3.jpeg" alt="">
+				</section>
+			</section>
+			<section data-background-image="assets/indexbackground.jpg">
+				<pre>
+					<code>Index</code>
+					<code data-trim>
+						1. Timeline of what I did
+						2. What I learnt about the boot process
+						3. What I learnt about partitions and the linux file system
+						4. What I learnt about Desktop Environments, Window 
+						   Managers, and Display Servers
+						5. My Chaawal
+						6. About Me
+					</code>
+				</pre>
+			</section>
+			<section>
+				<section data-auto-animate data-background-image="assets/cybercity-boy-homecoming-sb-1600x900.jpg">
+					<img src="assets/neofetch-grab.png" alt="">
+				</section>
+				<section data-auto-animate
+					data-background-image="assets/neon-skyscrapers-embracing-the-cyberpunk-cityscape-6y-1600x900.jpg">
+					<pre><code>A rough time line of the the things that I did</code></pre>
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2|3">
+						subzcuber@hp-elite ~> Tue Mar 19 2024 (before task)
+						Download Garuda Linux because of how sexy it looks
+						Tell people that I use arch btw (Garuda is Arch-based)
+					</code></pre>
+					<img class="fragment" src="assets/garuda-screen-fetch.png" alt="">
+				</section>
+				<section data-auto-animate data-background-image="assets/cybercity-boy-homecoming-sb-1600x900.jpg">
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2|3-4" data-ln-start-from="4">
+						subzcuber@hp-elite ~> Thu Mar 21 2024
+						Receive KOSS Task telling me to install arch
+						Go through the Arch Wiki and Watch tons of 
+						installation videos
+					</code></pre>
+				</section>
+				<section data-auto-animate
+					data-background-image="assets/neon-skyscrapers-embracing-the-cyberpunk-cityscape-6y-1600x900.jpg">
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2|3|4" data-ln-start-from="8">
+						subzcuber@hp-elite ~> Fri Mar 22 2024
+						Download archlinux iso
+						Check signature
+						Copy iso to live usb using dd command
+						</code></pre>
+					<img class="fragment" src="assets/key-verification.png" alt="">
+				</section>
+				<section data-auto-animate
+					data-background-image="assets/neon-skyscrapers-embracing-the-cyberpunk-cityscape-6y-1600x900.jpg">
+					<img src="assets/drive-flash-command.png" alt="">
+				</section>
+				<section data-auto-animate data-background-image="assets/cybercity-boy-homecoming-sb-1600x900.jpg">
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2|3-4|5-6|7-9|10-13|14|15" data-ln-start-from="12">
+						subzcuber@hp-elite ~> Sat Mar 23 2024
+						change from bios to uefi
+						Install arch
+						doesn't boot
+						Install arch again
+						forget to install essential packages
+						Install arch again
+						install kde plasma
+						decide against using a Desktop Environment because bloat
+						Install Arch again
+						install Hyprland (sexy window manager)
+						laptop won't automatically recognise efi file to boot from
+						(This is an HP issue, easy fix that I didn't know then)
+						change from uefi to bios
+						Install Arch again
+					</code></pre>
+				</section>
+				<section data-auto-animate data-background-image="assets/cybercity-boy-homecoming-sb-1600x900.jpg">
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2-5" data-ln-start-from="27">
+						subzcuber@hp-elite ~> Sun Mar 24 2024 to Mon Mar 25 2024
+						Spend an insane amount of time going through configuration
+						files and documentation
+						(I hate Waybar I literally did not sleep for 2 days
+						because of Waybar)
+					</code></pre>
+				</section>
+				<section data-auto-animate data-background-image="assets/cybercity-boy-homecoming-sb-1600x900.jpg">
+					<pre data-id="code-animation"><code data-trim data-line-numbers="1|2|3-4|5|6|7" data-ln-start-from="32">
+						subzcuber@hp-elite ~> Sat Mar 30 2024
+						Start Making Presentation
+						get distracted and dual boot Pop!_OS with Win11 with 
+						my developer friend
+						subzcuber@hp-elite ~> Sun Mar 31 2024
+						Actually start making presentation now
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<div style="background-color: #2e83c3;">
+						<h2 class="r-fit-text">WHAT I LEARNT</h2>
+						<h2 class="r-fit-text">ABOUT BOOTING</h2>
+					</div>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code data-trim data-line-numbers="">
+						1. What happens when a computer is turned on
+							a. What is a bootloader (file that loads kernel)
+							b. What is a kernel (makes hardware usable)
+						2. What are the differences in Legacy BIOS and uefi
+						3. Why did I change from UEFI to BIOS
+					</code></pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<img src="assets/sleepcomputer.gif" alt="">
+					<pre class="fragment"><code>this is your computer when turned off</code></pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code data-trim>
+						Turning on your computer gives power to your 
+						Motherboard and other hardware and triggers the 
+						BIOS chip on your motherboard
+					</code></pre>
+					<img src="assets/bioschipsnapshot.jpg" alt="" class="fragment">
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code data-trim>
+						The BIOS chip contains your firmware
+						First it triggers the Power-On Self-Test
+					</code></pre>
+					<img src="assets/POSTshinchan.gif" alt="" class="fragment">
+					<pre class="fragment"><code data-trim>
+						Here the motherboard verifies that all required hardware
+						is present and operational
+					</code></pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre>
+						<code data-trim data-line-numbers="1|2-3|4">
+							After POST the BIOS chip looks for a boot device
+							this could be your SSD, HDD, external USB, and even
+							ethernet
+						</code>
+					</pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code data-trim data-line-numbers="1|2|3|4|5">
+						Then the BIOS chip runs the bootable file on the device
+						This is either the MBR or an efi file
+						The first thing on the bootfile is usually the bootloader
+						in most Linux distros the bootloader is GRUB2
+						What the bootloader does is load the kernel into memory
+					</code>
+				</pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code data-trim data-line-numbers="">
+						What is the Kernel?
+						The kernel is a layer of software that sits between the 
+						hardware and the operating system
+						It is what loads your device drivers and makes your 
+						hardware usable
+					</code></pre>
+					<img src="assets/footballstuds.jpg" alt="" class="fragment" width="400px">
+					<pre class="fragment"><code data-trim>
+						Imagine you are the software
+						and TSC is the hardware
+						that makes your football equipment the kernel, it is what 
+						enables you make use of the football field properly
+					</code></pre>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<div style="background-color: #111520;">
+						<p style="text-align: left">
+						<strong>BIOS: Basic Input-Output System</strong> <br>
+						[] Just a specification about how to boot <br>
+						[] Older, not for drive space >2TB <br>
+						[] Uses Master Boot Record to load bootloader <br>
+						<strong>UEFI: Unified Extensible Firmware Interface</strong> <br>
+						[] Successor of BIOS <br>
+						[] Uses Guid Partition Table to find and load bootloader <br>
+						[] A little faster
+						</p>
+					</div>
+				</section>
+				<section data-background-image="assets/bootsnaspshot.jpg">
+					<pre><code>So why did I switch to Legacy BIOS?</code></pre>
+					<img src="assets/hpuefiissue.png" alt="" class="fragment">
+					<pre class="fragment">
+						<code data-trim data-line-numbers="1-2|3-4|5-6|7|8-10">
+							Even though I was using UEFI and everything was correct, 
+							my laptop couldn't detect the correct efi file
+							Because of this I had to manually select my efi
+							file during boot
+							I tried fixing this issue by changing the boot order using
+							efibootmgr, but that didn't help
+							Finally I switched to BIOS and ended up on my current setup
+							An easy fix would be to create a custom efi boot path in 
+							the UEFI settings, however I discovered the wiki article 
+							much later when I was looking up how to setup tlp
+						</code>
+					</pre>
+				</section>
+			</section>
+			<section>
+				<section data-background-image="assets/linuxfilesystemwp.png">
+					<div style="background-color: #002b36;">
+						<h2 class="r-fit-text">Partitions</h2>
+					</div>
+				</section>
+				<section data-background-image="assets/linuxfilesystemwp.png">
+					<pre><code data-trim>
+						When installing arch you are supposed
+						to partition your drive
+					</code></pre>
+					<img src="assets/lsblksnap.png" alt="" class="fragment">
+					<pre class="fragment"><code>my drive and partitions</code></pre>
+				</section>
+				<section data-background-image="assets/linuxfilesystemwp.png">
+					<pre><code data-trim data-line-numbers="1-2|3-5|6|7|8-10|11-12">
+						You can use the cfdisk command to easily setup your
+						partitions
+						[] First you select your drive label
+							BIOS = dos
+							UEFI = gpt
+						[] Then you make your boot partition
+						[] Then you make your root partition
+						[] Some people add swap partitions that essentially use
+							your hard drive like RAM. I thought this would be 
+							slower than RAM so I didn't do the same
+						[] I added a /home partition so that I won't lose my data 
+							if I ever change my OS again
+					</code></pre>
+				</section>
+				<section data-background-image="assets/linuxfilesystemwp.png">
+					<p class="fragment fade-out">this wallpaper shows the linux directory system</p>
+					<p class="fragment fade-in-then-out">as you can see we have to mount our partitions to abide this path</p>
+					<p class="fragment">so we mount our boot to /boot, our root to /, and our home to /home</p>
+				</section>
+			</section>
+			<section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre style="background-color: #946f6a;"><h1 class="r-fit-text">Display Servers</h1></pre>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre><code data-trim="">
+						A display server is a program that enables you to use the
+						Graphical User Interface
+					</code></pre>
+					<div style="background-color: #946f6a;">
+						<img src="assets/guischema.svg" alt="">
+					</div>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre><code data-trim data-line-numbers="1-2|3-4|5-6|7-9|10-11">
+						[]The connection between the GUI and the Server is called 
+						  the Display Protocol
+						  The most common one is X11, Wayland is a newer replacement
+						  for X11, however it does not have as much support yet
+						[]The Window Manager is a program that decides how to 
+						  render all the windows that you use
+						[]I decided to download Hyprland, a compositor that uses the 
+						  Wayland protocol. I'm not sure why I made my life so hard, 
+						  I just saw this name on r/unixporn and went with it
+						  this wallpaper is one of the defaults that comes with 
+						  Hyprland
+					</code></pre>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre><code data-trim data-line-numbers="1|2|3-4|5-6|7">
+						More about Hyprland (and window managers)
+						Hyprland is written in C++. I just think that's cool
+						Hyprland includes 
+						1. dyanmic tiling
+						2. tabbed windows (something I realised today, a week
+						   since I've been using it)
+						3. sexy animations and windows
+					</code></pre>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre style="background-color: #946f6a;"><h1 class="r-fit-text">Display Managers</h1></pre>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre><code data-trim data-line-numbers="1-2|3-5|6-7">
+						A login manager or display manager is the first screen that 
+						you see when you start using your computer. 
+						Often you also get the option to choose which Desktop 
+						Environment to log into, which is why its called a 
+						Display manager
+						I didnt want to install a display manager so I just log in 
+						from the command line interface (TTY)
+					</code></pre>
+				</section>
+				<section data-background-image="assets/calvhobbeslockscreen.webp">
+					<p class="fragment fade-out">if I did use a DM I would configure it like this though</p>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre style="background-color: #946f6a;"><h1 class="r-fit-text">Desktop Environment</h1></pre>
+				</section>
+				<section data-background-image="assets/hyprchan.png">
+					<pre><code data-trim data-line-numbers="1-4|5-6|7|8|9-11">
+						Desktop Environments are essentially just a collection
+						of all the software listed above along with tons of other 
+						packages, like a notification manager, screenshot tool, 
+						music player etc. You know, bloat. 
+						The most common ones that you see are (with the WM)
+						[] GNOME (Mutter WM)
+						[] KDE Plasma (KWIN WM)
+						[] Cinnamon (Muffin WM)
+						Since I didnt install a desktop environment and directly went 
+						with the window manager, there is a ton of software that I 
+						dont have. Or rather, I eliminated a lot of bloat ;)
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section data-background="black">
+					<img src="assets/rice.png" alt="">
+				</section>
+				<section data-background="black">
+					ricing is the term used to describe turning this: 
+					<img src="assets/carricebefore.jpg" alt="">
+				</section>
+				<section data-background="black">
+					into this: 
+					<img src="assets/carriceafter.jpg" alt="">
+				</section>
+				<section data-background="black">
+					linux users adapted that to mean turning this: 
+					<img src="assets/linuxricebefore.jpg" alt="">
+				</section>
+				<section data-background="black">
+					into this:
+					<img src="assets/linuxriceafter.webp" alt="">
+				</section>
+				<section data-background-image="assets/makimasnap.png">
+				</section>
+				<section data-background-image="assets/coolgirlsnap.png">
+				</section>
+				<section data-background-image="assets/milesnap.png">
+				</section>
+				<section data-background-image="assets/hyprsetupsnap.png">	
+				</section>
+				<section data-background="#008080">
+					<img src="assets/gitlogo.png" alt="" width="100px">
+					<div style="text-align: left;">
+						A lot of configuration files use CSS type formats which I am not very familiar with yet <br>
+						So I used the help of a lot preconfigured .config files (dotfiles), mostly from <br>
+						<ul>
+							<li><a href="https://github.com/prasanthrangan/hyprdots/tree/main">@prasanthrangan</a></li>
+							<li><a href="https://github.com/LoneWolf4713/auspicious-dots/">@LoneWolf4713</a></li>
+						</ul>
+						<br>
+						A lot of things provided didn't work, and nothing of theirs has been copied directly, I've had to add my own changes everywhere. 
+						Nevertheless I am thankful to both for being able to use their dotfiles
+					</div>
+				</section>
+			</section>
+			<section data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+				<section data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<div class="fragment" style="background: teal;">
+						<h2 class="r-fit-text">ABOUT ME</h2>
+					</div>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+							[] MX Linux was debian based and I was having issues getting
+							   a lot of software to work, so last sem when I needed Solidworks
+							   I went for Linux Mint because I thought it was popular so it would
+							   have more support. 
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+							[] MX Linux was debian based and I was having issues getting
+							   a lot of software to work, so last sem when I needed Solidworks
+							   I went for Linux Mint because I thought it was popular so it would
+							   have more support. 
+							   Apparently Solidworks doesn't work well on Linux no matter what.
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+							[] MX Linux was debian based and I was having issues getting
+							   a lot of software to work, so last sem when I needed Solidworks
+							   I went for Linux Mint because I thought it was popular so it would
+							   have more support. 
+							   Apparently Solidworks doesn't work well on Linux no matter what.
+							[] two weeks ago I switched to Garuda Linux because of how cool it looked.
+							   I managed to mess up the installation and delete my Win7. 
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+							[] MX Linux was debian based and I was having issues getting
+							   a lot of software to work, so last sem when I needed Solidworks
+							   I went for Linux Mint because I thought it was popular so it would
+							   have more support. 
+							   Apparently Solidworks doesn't work well on Linux no matter what.
+							[] two weeks ago I switched to Garuda Linux because of how cool it looked.
+							   I managed to mess up the installation and delete my Win7. 
+							   It did look cool though. 
+						</code>
+					</pre>
+				</section>
+				<section data-auto-animate data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre data-id="linux-things">
+						<code data-trim data-line-numbers="">
+							Linux things
+							[] I began with Zorin OS because I heard it was 
+							   recommended for people switching over from windows
+							   I dual-booted it with my windows 7 after JEE
+							[] I eventually switched to MX Linux randomly just because 
+							   I wanted something that looked cooler
+							[] MX Linux was debian based and I was having issues getting
+							   a lot of software to work, so last sem when I needed Solidworks
+							   I went for Linux Mint because I thought it was popular so it would
+							   have more support. 
+							   Apparently Solidworks doesn't work well on Linux no matter what.
+							[] two weeks ago I switched to Garuda Linux because of how cool it looked.
+							   I managed to mess up the installation and delete my Win7. 
+							   It did look cool though. 
+							[] Now I use Arch btw
+						</code>
+					</pre>
+				</section>
+				<section data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<pre>
+						<code data-trim data-noescape>
+							Other cool things <br>
+							<ul>
+								<li>I have been speedcubing for 6+ years</li>
+								<li>I am <em>officially</em> the fastest speedcuber in IITKGP</li>
+								<li>I am the national runner-up for Megaminx for 2023</li>
+							</ul>
+							These were all technically one thing
+						</code>
+					</pre>
+				</section>
+				<section data-background-image="https://avatars.worldcubeassociation.org/uploads/user/avatar/2018JAIN01/1708155379.JPG">
+					<div style="background: teal;">
+						Contact Me <br>
+					<span><img src="assets/mallogo.png" alt="" width="50px"></span><span><a href="https://myanimelist.net/profile/Impulsive2250/statistics/anime-scores">@Impulsive2250</a></span><br>
+					<span><img src="assets/gitlogo.png" alt="" width="75px"></span><span><a href="https://github.com/Majestic9169">@Majestic9169</a></span><br>
+					<span><img src="assets/WCALogo3Dsmall.png" alt="" width="75	px"></span><span><a href="https://www.worldcubeassociation.org/persons/2018JAIN01?event=minx">@2018JAIN01</a></span><br>
+					<span><img src="assets/LinkedInlogo.png" alt="" width="50px"></span><span><a href="https://in.linkedin.com/in/tegan-jain-804069290">Tegan Jain</a></span>
+					<br><br>
+					Mail: teganjain@kgpian.iitkgp.ac.in
+					</div>
+				</section>
+			</section>
+			<section>
+				<img src="assets/presentation-ending.jpg" data-background="black">
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
